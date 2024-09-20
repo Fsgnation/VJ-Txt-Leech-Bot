@@ -149,7 +149,7 @@ async def upload(bot: Client, m: Message):
 
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
-             url =  "https://d26g5bnklkwsh4.cloudfront.net/" + id + "/master.m3u8"
+             url =  "https://stream.pwjarvis.app/" + id + "/hls/480/main.m3u8"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
@@ -166,8 +166,8 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{MR}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
-                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
+                cc = f'**[🎬] Vid_ID:** **{str(count).zfill(3)}**\n\n** **Title » {𝗻𝗮𝗺𝗲𝟭}.mp4**\n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**\n\n**{MR}**'
+                cc1 = f'**[📁] Pdf_ID:** **{str(count).zfill(3)}**\n\n** **Title » {𝗻𝗮𝗺𝗲𝟭}.pdf**\n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**\n\n**{MR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
