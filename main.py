@@ -149,7 +149,7 @@ async def upload(bot: Client, m: Message):
 
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
-             url =  "https://stream.pwjarvis.app/" + id + "/hls/480/main.m3u8"
+             url ="https://madxabhi-pw-78ab681aba3f.herokuapp.com/pw/"+id+"/master.m3u8&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjk1ODc1NDguMjQ3LCJkYXRhIjp7Il9pZCI6IjY1OWU3YTg4Y2JjYTcyOTBjZDkxZDVhMCIsInVzZXJuYW1lIjoiNzA1NTg1NTEzNyIsImZpcnN0TmFtZSI6IkhhcnNoIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwiZW1haWwiOiJoazg0NjgyODJAZ21haWwuY29tIiwicm9sZXMiOlsiNWIyN2JkOTY1ODQyZjk1MGE3NzhjNmVmIl0sImNvdW50cnlHcm91cCI6IklOIiwidHlwZSI6IlVTRVIifSwiaWF0IjoxNzI4OTgyNzQ4fQ.dCRcm_b6eI4cw27npsPUFR5ldDLhgBBvg4PKRFR7LJU"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
