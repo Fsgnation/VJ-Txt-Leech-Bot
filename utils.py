@@ -1,6 +1,62 @@
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
+
+# List of user IDs that are allowed to access the commands
+ALLOWED_USER_IDS = {50700752896289965347,}  # Replace with actual user IDs
+
+def check_user(update: Update) -> bool:
+    """Check if the user is in the allowed list."""
+    return update.effective_user.id in ALLOWED_USER_IDS
+
+def start(update: Update, context: CallbackContext) -> None:
+    if check_user(update):
+        update.message.reply_text("Welcome! You can use the commands /txt, /upload, /stop.")
+    else:
+        update.message.reply_text("You are not authorized to use this bot.")
+
+def txt(update: Update, context: CallbackContext) -> None:
+    if check_user(update):
+        update.message.reply_text("This is the /txt command response.")
+    # No else block means no response if the user is not authorized.
+
+def upload(update: Update, context: CallbackContext) -> None:
+    if check_user(update):
+        update.message.reply_text("This is the /upload command response.")
+    
+def stop(update: Update, context: CallbackContext) -> None:
+    if check_user(update):
+        update.message.reply_text("This is the /stop command response.")
+
+def main() -> None:
+    # Create the Updater and pass it your bot's token
+    updater = Updater(BOT_TOKEN)
+
+    # Get the dispatcher to register handlers
+    dispatcher = updater.dispatcher
+
+    # Register command handlers
+    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(CommandHandler("txt", txt))
+    dispatcher.add_handler(CommandHandler("upload", upload))
+    dispatcher.add_handler(CommandHandler("stop", stop))
+
+    # Start the Bot
+    updater.start_polling()
+
+    # Run the bot until you send a signal to stop (Ctrl+C)
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
 
 import time
 import math
