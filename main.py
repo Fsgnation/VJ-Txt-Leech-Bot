@@ -165,7 +165,7 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f"➭ Index » {str(count).zfill(3)}\n➭ Title » {𝗻𝗮𝗺𝗲𝟭}.mp4\n➭ 𝔹ᴀᴛᴄʜ » {raw_text0}\n\n✨ Must Join @FsgNation\n✨ Must Join @FsgNation</b>"
+                cc = f"➭ Index » {str(count).zfill(3)}\n➭ Title » {𝗻𝗮𝗺𝗲𝟭}.mkv\n➭ 𝔹ᴀᴛᴄʜ » {raw_text0}\n\n✨ Must Join @FsgNation\n✨ Must Join @FsgNation</b>"
                 cc1 = f"<b>[📁] Pdf_ID: {str(count).zfill(3)}\n\nTitle » {𝗻𝗮𝗺𝗲𝟭}.pdf\n\n𝔹ᴀᴛᴄʜ » {raw_text0}\n\n{MR}</b>"
                 if "drive" in url:
                     try:
